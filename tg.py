@@ -9,4 +9,7 @@ bot = t.telebot.TeleBot(token='7992565364:AAE1dXHxjYWgr6wbUwW7DPP3WcPVloBC4g8')
 def OTKAT(message:m):
     forum=datetime.today().strftime('%Y/%m/%d %H:%M:%S')
     bot.send_message(message.chat.id,forum)
+@bot.message_handler(['id'])
+def idi(message:m):
+    bot.send_message(message.chat.id,f'{message.chat.id}')
 bot.infinity_polling()
